@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript">
+		function tabu(){ 
+                 var n= new Number(document.fr.numero.value);
+                var tabuada="<table align=center id='tabb'><br><h1 style='text-align: center;'>Tabuada do "+n+"</h1>";
+               for (i = 1; i <=n; i++){
+                     var p = n*i;
+              tabuada = tabuada + "<tr><td>" + n + " x " + i + " = " + p + "</tr></td>";
+              }
+              tabuada = tabuada + "</table>";
+              document.getElementById("resposta").innerHTML = tabuada;
+               }
+               function limpar(){
+               	while(i >0)
+               	{
+               		$('#resposta').remove();
+               		i-=1;
+               	}
+               }
+	</script>
+	<style type="text/css">
+		#tabb{
+			border: background solid thin;
+		     background-color:#fff;
+		     width: 200px;
+		     padding:10px;
+		     border-top-left-radius: 10px;
+		     border-top-right-radius: 10px;
+		     border-bottom-left-radius: 10px;
+		     border-bottom-right-radius: 10px;
+		}
+		#tab {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+button {
+		background-color:#ff8000; 
+		width: 100px;
+
+}
+</style>
+	<title>Tabuada</title>
+</head>
+<body>
+	<form name="fr" >
+		<fieldset style="width: 50% font-size: 24px; margin:auto ; border: 10px double; color: #ff8000; background-color: #ffbf80">
+			<p style="text-align: center; font-size: 32px; color: #ff8000;">Tabuada do ratinhooooo</p>
+			<fieldset style="color: #ff8000; width: 40%; margin: auto ; background-color: #ffffff; border: 20px solid; border-radius: 40px">
+				<legend style="text-align: center; border: solid; background-color: #009999; color: #ff8000;"> <h2>Entrada</h2></legend><br>
+				<img src="ratinho.jpg" align="left" width="200" height="200" style="border-radius: 4000px"><br>
+					<table id="tab" style="text-align: center; width: 60%" align="center">
+					<tr align="center">
+						<td>Nome</td>
+						<td>Tabuada</td>
+					</tr>
+					<tr align="center">
+						<td><input type="text" name="nome" style="border-radius: 4000px; width: 100px"></td>
+						<td><input type="text" name="numero" style="border-radius: 4000px; width: 100px"></td>
+					</tr>	
+					<tr>
+						<td><br><button type="button" onclick="tabu();" >Calcular</button> </td>
+						<td><br><button type="reset" onclick="$('#tabb').remove();">Limpar</button></td>
+					</tr>
+				</table>
+			</fieldset>
+					<br><fieldset style="color: #ff8000; width: 40%; margin: auto ; background-color: #ffffff; border: 20px solid; border-radius: 40px">
+				<legend style="text-align: center; border: solid; background-color: #009999; color: #ff8000;"> <h2>Saida</h2></legend><br>
+				<img src="ratinho.jpg" align="left" width="200" height="200" style="border-radius: 4000px"><br>
+				<p id="resposta"> </p>
+			</fieldset>
+			</fieldset>
+
+	</form>
+</body>
+</html>
